@@ -1,0 +1,21 @@
+Aihe: Ohjelma piirt‰‰ Sierpinskin kolmion ns. "chaos game"- menetelm‰ll‰. 
+      	Sierpinskin kolmio on fraktaali, jonka piirt‰miseen on monta tapaa. T‰ss‰ k‰ytet‰‰n 6-vaiheista satunnaisuuteen perustuvaa algoritmia.
+	
+	1. Tasoon piirret‰‰n kolmio, jonka kulmat numeroidaan 0,1,2
+	2. Valitaan yksi kulma nykyiseksi sijainniksi
+	3. Valitaan satunnaisesti yksi kulmista kohteeksi
+	4. Kuljetaan puolet nykyisen sijainnin ja kohteen v‰lisest‰ matkasta
+	5. Piirret‰‰n t‰h‰n paikkaan piste ja asetetaan se nykyiseksi sijanniksi
+	6. Toistetaan kohdasta 3.
+
+	Satojen pisteiden j‰lkeen alkaa hahmottua mielenkiintoinen kuvio, Sierpinskin kolmio. Piirt‰mist‰ kuvataan liikkuvalla kappaleella, esim pallolla. 
+
+
+K‰ytt‰j‰: Kuka tahansa
+
+K‰ytt‰j‰n toiminnot (suunnitellut):
+	Valitse piirtonopeus
+	M‰‰rit‰ kolmion k‰rjet
+	Aloita/pys‰yt‰
+	 
+	
