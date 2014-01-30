@@ -2,10 +2,8 @@
 	Githubin käyttö, projektin aloitus, konseptin kokeilu paperilla.
 
 23.1 5h
-<<<<<<< HEAD
 	Tekstiversion ja laskennan tekeminen, testauksen aloittaminen, luokkakaavio
 
-30.1 5h Testausta, käyttöliittymän alkeet, refaktorointi, Git-säätöä
+30.1 5h 
+	Testausta, käyttöliittymän alkeet, refaktorointi, Git-säätöä
 =======
-	Tekstiversion ja laskennan tekeminen, testauksen aloittaminen, luokkakaavio
->>>>>>> b346cbc97915f45614a2e3977b2dcaa8da4eec65
