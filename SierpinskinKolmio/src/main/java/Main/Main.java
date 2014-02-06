@@ -1,3 +1,5 @@
+package Main;
+
 
 import javalabra.piirtaja.Piirtaja;
 import javalabra.kayttoliittyma.Kayttoliittyma;
