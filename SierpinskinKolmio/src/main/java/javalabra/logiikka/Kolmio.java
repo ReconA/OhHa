@@ -16,30 +16,38 @@ public class Kolmio implements Piirrettava {
     public List<Piste> getKulmat() {
         return kulmat;
     }
-
+/**
+ * Lisää annetun kulman kolmioon
+ * <p>
+ * Kolmioon voidaan lisätä yli 3 kulmaa erilaisten kuvioiden luomiseksi
+ * 
+ * @param kulma Lisättävä kulma
+ */
+    
     public void lisaaKulma(Piste kulma) {
         kulmat.add(kulma);
     }
 
+    /**
+     * Arpoo yhden kolmion kulman
+     *
+     *
+     * @return Kolmion kulma Piste. Jos kulmia ei ole, palautetaan null
+     */
     public Piste arvoKulma() {
         if (!kulmat.isEmpty()) {
             return kulmat.get(new Random().nextInt(kulmat.size()));
         }
-
         return null;
     }
 
+    
+    /**
+     * Piirtaa kolmion kulmia vastaavat pisteet
+     */
     @Override
     public void piirra(Graphics graphics) {
-        for (int i = 0; i < kulmat.size() - 1; i++) {
-            graphics.drawLine(kulmat.get(i).getX(), kulmat.get(i).getY(), kulmat.get(i + 1).getX(), kulmat.get(i + 1).getY());
-        }
-        
-        Piste viimeinen = kulmat.get(kulmat.size() - 1);
-        Piste ensimmainen = kulmat.get(0);
-        graphics.drawLine(viimeinen.getX(), viimeinen.getY(), ensimmainen.getX(), ensimmainen.getY());
-        
-        for (Piste p: kulmat) {
+        for (Piste p : kulmat) {
             p.piirra(graphics);
         }
     }

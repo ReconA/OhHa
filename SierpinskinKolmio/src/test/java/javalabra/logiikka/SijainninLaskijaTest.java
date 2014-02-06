@@ -1,16 +1,8 @@
 package javalabra.logiikka;
 
-import javalabra.logiikka.Kolmio;
-import javalabra.VanhaKoodi.Kulma;
-import javalabra.logiikka.Piste;
-import javalabra.logiikka.SijainninLaskija;
-import javalabra.VanhaKoodi.Sijainti;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
 
 public class SijainninLaskijaTest {
 
@@ -45,7 +37,7 @@ public class SijainninLaskijaTest {
         Piste k = new Piste(40, 0);
 
         laskija.setSijainti(sijainti);
-        laskija.liikuKohtiKulmaa(k);
+        laskija.laskeSeuraavaSijainti();
 
         assertEquals("(13,10)", laskija.getSijainti().toString());
     }
@@ -54,13 +46,12 @@ public class SijainninLaskijaTest {
     public void uudenPisteenLaskentaToimiiUseastiKutsuttuna() {
         Piste sijainti = new Piste(20, -10);
         Piste k1 = new Piste(-15, -15);
-        Piste k2 = new Piste(40, 20);
 
         laskija.setSijainti(sijainti);
 
-        laskija.liikuKohtiKulmaa(k1);
-        laskija.liikuKohtiKulmaa(k2);
-        laskija.liikuKohtiKulmaa(k2);
+        laskija.laskeSeuraavaSijainti();
+        laskija.laskeSeuraavaSijainti();
+        laskija.laskeSeuraavaSijainti();
 
         assertEquals("(31,12)", laskija.getSijainti().toString());
     }
@@ -69,7 +60,7 @@ public class SijainninLaskijaTest {
     public void liikkuminenKohtiTyhjaaKulmaa() {
         
         Piste tyhja = null;
-        laskija.liikuKohtiKulmaa(tyhja);
+        laskija.laskeSeuraavaSijainti();
     }
     
     

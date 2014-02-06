@@ -10,7 +10,8 @@ public class Kayttoliittyma implements Runnable {
 
     private JFrame frame;
     private Piirrettava piirrettava;
-
+    private Piirtoalusta alusta;
+    
     public Kayttoliittyma(Piirrettava piirrettava) {
         this.piirrettava = piirrettava;
     }
@@ -19,7 +20,7 @@ public class Kayttoliittyma implements Runnable {
     @Override
     public void run() {
         frame = new JFrame("Trianglelieli");
-        frame.setPreferredSize(new Dimension(800, 600));
+        frame.setPreferredSize(new Dimension(1650, 1050));
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
@@ -30,7 +31,7 @@ public class Kayttoliittyma implements Runnable {
     }
 
     private void luoKomponentit(Container container) {
-        Piirtoalusta alusta = new Piirtoalusta(piirrettava);
+        this.alusta = new Piirtoalusta(piirrettava);
         container.add(alusta);
     }
 

@@ -14,11 +14,13 @@ public class SijainninLaskija {
         }
     }
 
-    public void liikuKohtiKulmaa(Piste kohde) {
-        if (kohde == null) {
-            System.out.println("Kohdetta ei olemassa!");
+    public void laskeSeuraavaSijainti() {
+        if (this.kolmio.getKulmat().isEmpty()) {
+            System.out.println("Kulmia ei lisätty!");
             return;
         }
+        
+        Piste kohde = this.kolmio.arvoKulma();
 
         int uusiX = kohde.getX() - (kohde.getX() - sijainti.getX()) / 2;
         int uusiY = kohde.getY() - (kohde.getY() - sijainti.getY()) / 2;
@@ -34,14 +36,5 @@ public class SijainninLaskija {
     public void setSijainti(Piste sijainti) {
         this.sijainti = sijainti;
     }
-    //    public Sijainti arvoAloitusSijainti() {
-//        Piste aloitusKulma = kolmio.arvoKulma();
-//        Sijainti aloitusSijainti;
-//        if (aloitusKulma == null) {
-//            aloitusSijainti = new Sijainti(0, 0);
-//        } else {
-//            aloitusSijainti = new Sijainti(aloitusKulma.getX(), aloitusKulma.getY());
-//        }
-//        return aloitusSijainti;
-//    }
+
 }

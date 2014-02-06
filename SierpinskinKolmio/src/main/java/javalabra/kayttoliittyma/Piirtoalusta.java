@@ -13,7 +13,8 @@ public class Piirtoalusta extends JPanel {
         this.piiirettava = piirrettava;
     }
 
-    protected void paintcomponent(Graphics graphics) {
+    @Override
+    protected void paintComponent(Graphics graphics) {
         super.paintComponent(graphics);
         piiirettava.piirra(graphics);
     }

@@ -1,6 +1,5 @@
 
-
-import java.util.Scanner;
+import javalabra.piirtaja.Piirtaja;
 import javalabra.kayttoliittyma.Kayttoliittyma;
 import javalabra.logiikka.Kolmio;
 import javalabra.logiikka.Piste;
@@ -10,55 +9,33 @@ import javax.swing.SwingUtilities;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner lukija = new Scanner(System.in);
-        System.out.println("Sierpinskin kolmio alpha 0.1");
-        System.out.println("----------------------------\n");
+        System.out.println("Sierpinskin kolmio alpha 0.2");
+        System.out.println("----------------------------");
 
         Kolmio kolmio = new Kolmio();
 
-        Piste kulma1 = new Piste(-100, -200);
-        Piste kulma2 = new Piste(200, 400);
-        Piste kulma3 = new Piste(300, 150);
+        Piste kulma1 = new Piste(800, 20);            //Tasasivuinen kolmio
+        Piste kulma2 = new Piste(50, 920);
+        Piste kulma3 = new Piste(1550, 920);
+//
+//        Piste kulma1 = new Piste(50, 50);               //Neliö
+//        Piste kulma2 = new Piste(50, 750);
+//        Piste kulma3 = new Piste(800, 50);
+//        Piste kulma4 = new Piste(800, 750);
+//        Piste kulma5 = new Piste(60, 60);               //Painottaa neliön kulman
+        
         kolmio.lisaaKulma(kulma1);
         kolmio.lisaaKulma(kulma2);
         kolmio.lisaaKulma(kulma3);
+//        kolmio.lisaaKulma(kulma4);                        //Neliön kulmia
+//        kolmio.lisaaKulma(kulma5);                    
 
         SijainninLaskija laskija = new SijainninLaskija(kolmio);
-        
-        Kayttoliittyma kl = new Kayttoliittyma(kulma2);
-        SwingUtilities.invokeLater(kl);
+        Piirtaja piirtaja = new Piirtaja(kolmio, laskija);
 
+        Kayttoliittyma kl = new Kayttoliittyma(piirtaja);
+        SwingUtilities.invokeLater(kl);
 
     }
 }
 
-
-
-//        System.out.println("Anna kolmion kulmien koordinaatit");
-//
-//        for (int i = 0; i < 3; i++) {
-//            System.out.print("X:");
-//            int x = Integer.parseInt(lukija.nextLine());
-//            System.out.print("Y:");
-//            int y = Integer.parseInt(lukija.nextLine());
-//            System.out.println("");
-//
-//            Kulma kulma = new Kulma(x, y);
-//            laskija.lisaaKulma(kulma);
-//        }
-
-//        while (true) {
-//            System.out.println("Sijainti nyt: " + sijainti);
-//            Piste kohde = kolmio.arvoKulma();
-//            System.out.println("Valittu kulma: " + kohde);
-//            laskija.liikuKohtiKulmaa(kohde);
-//            System.out.println("Siirryttiin pisteeseen " + sijainti + "\n");
-//            
-//            System.out.println("y jos haluat lisää");
-//            String komento = lukija.nextLine();
-//            if (!komento.equals("y")) {
-//                break;
-//            }
-//            System.out.println("");
-//        }
-//        Piste sijainti = laskija.getSijainti();

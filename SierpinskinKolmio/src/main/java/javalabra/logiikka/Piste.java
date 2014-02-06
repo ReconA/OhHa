@@ -35,6 +35,6 @@ public class Piste implements Piirrettava {
 
     @Override
     public void piirra(Graphics graphics) {
-        graphics.fillRect(x, y, 5, 5);
+        graphics.fillRect(x, y, 1, 1);
     }
 }

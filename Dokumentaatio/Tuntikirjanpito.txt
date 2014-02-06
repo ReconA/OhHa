@@ -1,2 +1,9 @@
-16.1 1h
-	Githubin käyttö
+16.1 2h
+	Githubin käyttö, projektin aloitus, konseptin kokeilu paperilla.
+
+23.1 5h
+	Tekstiversion ja laskennan tekeminen, testauksen aloittaminen, luokkakaavio
+
+30.1 5h 
+	Testausta, käyttöliittymän alkeet, refaktorointi, Git-säätöä
+=======
