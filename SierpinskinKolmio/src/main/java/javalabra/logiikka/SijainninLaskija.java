@@ -1,21 +1,25 @@
-package javalabra.Logiikka;
+package javalabra.logiikka;
 
 public class SijainninLaskija {
 
-    private Sijainti sijainti;
+    private Piste sijainti;
     private Kolmio kolmio;
 
     public SijainninLaskija(Kolmio kolmio) {
         this.kolmio = kolmio;
-        this.sijainti = arvoAloitusSijainti();
+        if (!kolmio.getKulmat().isEmpty()) {
+            this.sijainti = new Piste(kolmio.arvoKulma().getX(), kolmio.arvoKulma().getY());
+        } else {
+            this.sijainti = new Piste(0, 0);
+        }
     }
 
-    public void liikuKohtiKulmaa(Kulma kohde) {
+    public void liikuKohtiKulmaa(Piste kohde) {
         if (kohde == null) {
             System.out.println("Kohdetta ei olemassa!");
             return;
         }
-        
+
         int uusiX = kohde.getX() - (kohde.getX() - sijainti.getX()) / 2;
         int uusiY = kohde.getY() - (kohde.getY() - sijainti.getY()) / 2;
 
@@ -23,23 +27,13 @@ public class SijainninLaskija {
         sijainti.setY(uusiY);
     }
 
-    public Sijainti arvoAloitusSijainti() {
-        Kulma aloitusKulma = kolmio.arvoKulma();
-        Sijainti aloitusSijainti;
-        if (aloitusKulma == null) {
-            aloitusSijainti = new Sijainti(0, 0);
-        } else {
-            aloitusSijainti = new Sijainti(aloitusKulma.getX(), aloitusKulma.getY());
-        }
-        return aloitusSijainti;
-    }
-
-    public Sijainti getSijainti() {
+    public Piste getSijainti() {
         return sijainti;
     }
 
-    public void setSijainti(Sijainti sijainti) {
+    public void setSijainti(Piste sijainti) {
         this.sijainti = sijainti;
+
+
     }
-    
 }
