@@ -6,4 +6,6 @@
 
 30.1 5h 
 	Testausta, käyttöliittymän alkeet, refaktorointi, Git-säätöä
-=======
+
+6.2 6h
+	Javadocien kirjoittamista, käyttöliittymän alkeet, refaktorointia
