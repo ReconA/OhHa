@@ -1,10 +1,20 @@
 package javalabra.logiikka;
-
+/**
+ * Laskee uuden pisteen sijainnin
+ * <p>
+ *
+ * @author Atte
+ */
 public class SijainninLaskija {
 
     private Piste sijainti;
     private Kolmio kolmio;
-
+/**
+ * Luo uuden laskijan
+ * <p>
+ * Saa parametrina kolmion, jonka yksi kulma arvotaan aloitussijainniksi. Jos kolmio on tyhja, aloitussijainti on (0,0)
+ * @param kolmio Sijannin laskentaan käytettävä kolmio
+ */
     public SijainninLaskija(Kolmio kolmio) {
         this.kolmio = kolmio;
         if (!kolmio.getKulmat().isEmpty()) {
@@ -13,7 +23,11 @@ public class SijainninLaskija {
             this.sijainti = new Piste(0, 0);
         }
     }
-
+/**
+ * Laskee seuraavan pisteen koordinaatit
+ * <p>
+ * Arpoo yhden kolmion kulman ja kulkee puolet nykyisen sijainnin ja kulman välisestä matkasta
+ */
     public void laskeSeuraavaSijainti() {
         if (this.kolmio.getKulmat().isEmpty()) {
             System.out.println("Kulmia ei lisätty!");

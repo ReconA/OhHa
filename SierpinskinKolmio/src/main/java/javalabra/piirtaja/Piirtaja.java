@@ -5,6 +5,10 @@ import javalabra.logiikka.Kolmio;
 import javalabra.logiikka.Piirrettava;
 import javalabra.logiikka.Piste;
 import javalabra.logiikka.SijainninLaskija;
+/**
+ * Huolehtii uusien pisteiden piirtämisestä
+ * @author Atte
+ */
 
 public class Piirtaja implements Piirrettava {
 
@@ -16,7 +20,10 @@ public class Piirtaja implements Piirrettava {
         this.laskija = laskija;
 
     }
-
+/**
+ * Tällä hetkellä piirtää 500 000 pistettä, tulevaisuudessa käyttää timeria
+ * @param g 
+ */
     @Override
     public void piirra(Graphics g) {
         this.kolmio.piirra(g);

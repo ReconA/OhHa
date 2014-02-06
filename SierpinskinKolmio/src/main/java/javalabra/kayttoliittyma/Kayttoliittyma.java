@@ -5,7 +5,10 @@ import java.awt.Dimension;
 import javalabra.logiikka.Piirrettava;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
-
+/**
+ * Ohjelman käyttöliittymä
+ * @author Atte
+ */
 public class Kayttoliittyma implements Runnable {
 
     private JFrame frame;

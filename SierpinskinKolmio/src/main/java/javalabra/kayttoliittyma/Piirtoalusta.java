@@ -4,7 +4,10 @@ import java.awt.Color;
 import java.awt.Graphics;
 import javalabra.logiikka.Piirrettava;
 import javax.swing.JPanel;
-
+/**
+ * 
+ * @author Atte
+ */
 public class Piirtoalusta extends JPanel {
     private Piirrettava piiirettava;
     
