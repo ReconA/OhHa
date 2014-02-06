@@ -47,6 +47,7 @@ public class Kolmio implements Piirrettava {
      */
     @Override
     public void piirra(Graphics graphics) {
+
         for (Piste p : kulmat) {
             p.piirra(graphics);
         }

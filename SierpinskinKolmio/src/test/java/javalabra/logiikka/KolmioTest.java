@@ -15,21 +15,21 @@ public class KolmioTest {
 
     }
 
-    @Test
-    public void metodiLisaaKulmaLisaaOikeanKulman() {
-        Piste k = kolmio.getKulmat().get(0);
-        assertEquals(k.toString(), "(10,20)");
-    }
-
-    @Test
-    public void tyhjaKolmionMetodiArvoKolmioPalauttaaNull() {
-        Kolmio k = new Kolmio();
-        assertEquals(null, k.arvoKulma());
-    }
-
-    @Test
-    public void arvoKulmaPalauttaaKulmanKunKolmioEiTyhja() {
-        assertEquals(kolmio.arvoKulma().toString(), "(10,20)");
-    }
-    
+//    @Test
+//    public void metodiLisaaKulmaLisaaOikeanKulman() {
+//        Piste k = kolmio.getKulmat().get(0);
+//        assertEquals(k.toString(), "(10,20)");
+//    }
+//
+//    @Test
+//    public void tyhjaKolmionMetodiArvoKolmioPalauttaaNull() {
+//        Kolmio k = new Kolmio();
+//        assertEquals(null, k.arvoKulma());
+//    }
+//
+//    @Test
+//    public void arvoKulmaPalauttaaKulmanKunKolmioEiTyhja() {
+//        assertEquals(kolmio.arvoKulma().toString(), "(10,20)");
+//    }
+//    
 }

@@ -8,7 +8,7 @@ public class SijainninLaskija {
     public SijainninLaskija(Kolmio kolmio) {
         this.kolmio = kolmio;
         if (!kolmio.getKulmat().isEmpty()) {
-            this.sijainti = new Piste(kolmio.arvoKulma().getX(),kolmio.arvoKulma().getY());
+            this.sijainti = new Piste(kolmio.arvoKulma().getX(), kolmio.arvoKulma().getY());
         } else {
             this.sijainti = new Piste(0, 0);
         }
@@ -35,6 +35,8 @@ public class SijainninLaskija {
 
     public void setSijainti(Piste sijainti) {
         this.sijainti = sijainti;
+
+
     }
 
 }
