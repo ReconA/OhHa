@@ -9,3 +9,6 @@
 
 6.2 6h
 	Javadocien kirjoittamista, käyttöliittymän alkeet, refaktorointia
+
+13.2 5h
+	Timerin kanssa säätämistä, sekvenssikaavioiden piirtämistä

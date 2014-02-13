@@ -11,11 +11,10 @@ import javax.swing.SwingUtilities;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Sierpinskin kolmio alpha 0.2");
+        System.out.println("Sierpinskin kolmio alpha 0.5");
         System.out.println("----------------------------");
 
         Kolmio kolmio = new Kolmio();
-
         Piste kulma1 = new Piste(800, 20);            //Tasasivuinen kolmio
         Piste kulma2 = new Piste(50, 920);
         Piste kulma3 = new Piste(1550, 920);

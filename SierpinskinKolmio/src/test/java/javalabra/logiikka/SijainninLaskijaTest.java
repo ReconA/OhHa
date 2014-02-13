@@ -12,13 +12,6 @@ public class SijainninLaskijaTest {
     @Before
     public void setUp() {
         kolmio = new Kolmio();
-        Piste k1 = new Piste(10, 20);
-        Piste k2 = new Piste(-10, -30);
-        Piste k3 = new Piste(40, 0);
-
-        kolmio.lisaaKulma(k1);
-        kolmio.lisaaKulma(k2);
-        kolmio.lisaaKulma(k3);
         laskija = new SijainninLaskija(kolmio);
 
     }
@@ -45,7 +38,6 @@ public class SijainninLaskijaTest {
     @Test
     public void uudenPisteenLaskentaToimiiUseastiKutsuttuna() {
         Piste sijainti = new Piste(20, -10);
-        Piste k1 = new Piste(-15, -15);
 
         laskija.setSijainti(sijainti);
 
@@ -55,15 +47,11 @@ public class SijainninLaskijaTest {
 
         assertEquals("(31,12)", laskija.getSijainti().toString());
     }
-    
+
     @Test
     public void liikkuminenKohtiTyhjaaKulmaa() {
-        
+
         Piste tyhja = null;
         laskija.laskeSeuraavaSijainti();
     }
-    
-    
-    
-    
 }

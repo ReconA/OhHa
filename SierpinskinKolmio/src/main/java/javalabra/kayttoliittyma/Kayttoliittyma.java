@@ -2,7 +2,7 @@ package javalabra.kayttoliittyma;
 
 import java.awt.Container;
 import java.awt.Dimension;
-import javalabra.logiikka.Piirrettava;
+import javalabra.piirtaja.Piirtaja;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 /**
@@ -12,17 +12,17 @@ import javax.swing.WindowConstants;
 public class Kayttoliittyma implements Runnable {
 
     private JFrame frame;
-    private Piirrettava piirrettava;
+    private Piirtaja piirtaja;
     private Piirtoalusta alusta;
     
-    public Kayttoliittyma(Piirrettava piirrettava) {
-        this.piirrettava = piirrettava;
+    public Kayttoliittyma(Piirtaja piirtaja) {
+        this.piirtaja = piirtaja;
     }
 
 
     @Override
     public void run() {
-        frame = new JFrame("Trianglelieli");
+        frame = new JFrame("Sierpinskin kolmio");
         frame.setPreferredSize(new Dimension(1650, 1050));
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -34,7 +34,7 @@ public class Kayttoliittyma implements Runnable {
     }
 
     private void luoKomponentit(Container container) {
-        this.alusta = new Piirtoalusta(piirrettava);
+        this.alusta = new Piirtoalusta(piirtaja);
         container.add(alusta);
     }
 

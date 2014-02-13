@@ -1,6 +1,5 @@
 package javalabra.logiikka;
 
-import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -12,7 +11,7 @@ import java.util.Random;
  * @author Atte
  */
 
-public class Kolmio implements Piirrettava {
+public class Kolmio {
 
     private List<Piste> kulmat;
 /**
@@ -50,17 +49,5 @@ public class Kolmio implements Piirrettava {
             return kulmat.get(new Random().nextInt(kulmat.size()));
         }
         return null;
-    }
-
-    
-    /**
-     * Piirtaa kolmion kulmia vastaavat pisteet
-     */
-    @Override
-    public void piirra(Graphics graphics) {
-
-        for (Piste p : kulmat) {
-            p.piirra(graphics);
-        }
     }
 }
