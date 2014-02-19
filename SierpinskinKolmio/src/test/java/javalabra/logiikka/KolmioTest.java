@@ -17,7 +17,7 @@ public class KolmioTest {
 
     @Test
     public void metodiLisaaKulmaLisaaOikeanKulman() {
-        Piste k = kolmio.getKulmat().get(0);
+        Piirrettava k = kolmio.getKulmat().get(0);
         assertEquals(k.toString(), "(10,20)");
     }
 

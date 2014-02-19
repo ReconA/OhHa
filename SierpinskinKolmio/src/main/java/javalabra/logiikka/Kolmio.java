@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class Kolmio {
 
-    private List<Piste> kulmat;
+    private List<Piirrettava> kulmat;
 /**
  * Luo uuden kolmion
  * <p>
@@ -23,7 +23,7 @@ public class Kolmio {
         this.kulmat = new ArrayList<>();
     }
 
-    public List<Piste> getKulmat() {
+    public List<Piirrettava> getKulmat() {
         return kulmat;
     }
 /**
@@ -34,20 +34,23 @@ public class Kolmio {
  * @param kulma Lisättävä kulma
  */
     
-    public void lisaaKulma(Piste kulma) {
+    public void lisaaKulma(Piirrettava kulma) {
         kulmat.add(kulma);
     }
 
     /**
-     * Arpoo yhden kolmion kulman
+     * Arpoo ja palauttaa yhden kolmion kulmista
      *
      *
      * @return Kolmion kulma Piste. Jos kulmia ei ole, palautetaan null
      */
-    public Piste arvoKulma() {
+    public Piirrettava arvoKulma() {
         if (!kulmat.isEmpty()) {
             return kulmat.get(new Random().nextInt(kulmat.size()));
         }
         return null;
     }
+    
+
+  
 }

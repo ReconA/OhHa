@@ -8,7 +8,7 @@ import javax.swing.JPanel;
  *
  * @author Atte
  */
-public class Piirtoalusta extends JPanel {
+public class Piirtoalusta extends JPanel{
 
     private Piirtaja piirtaja;
 
@@ -27,5 +27,4 @@ public class Piirtoalusta extends JPanel {
         super.repaint();
     }
     
-
 }

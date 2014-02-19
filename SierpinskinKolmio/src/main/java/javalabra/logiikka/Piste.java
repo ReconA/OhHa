@@ -24,18 +24,22 @@ public class Piste implements Piirrettava {
 
     }
 
+    @Override
     public int getX() {
         return x;
     }
 
+    @Override
     public int getY() {
         return y;
     }
 
+    @Override
     public void setX(int x) {
         this.x = x;
     }
 
+    @Override
     public void setY(int y) {
         this.y = y;
     }
@@ -47,4 +51,12 @@ public class Piste implements Piirrettava {
     public void piirra(Graphics graphics) {
         graphics.fillRect(x, y, 1, 1);
     }
+    
+    
+    @Override
+    public Piirrettava kloonaa() {
+        return new Piste(this.x, this.y);
+    }
+
+  
 }

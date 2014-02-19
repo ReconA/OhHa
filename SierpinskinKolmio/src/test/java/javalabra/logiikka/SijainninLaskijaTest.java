@@ -12,14 +12,14 @@ public class SijainninLaskijaTest {
     @Before
     public void setUp() {
         kolmio = new Kolmio();
-        laskija = new SijainninLaskija(kolmio);
+        laskija = new SijainninLaskija();
 
     }
 
     @Test
     public void konstruktoriSaaTyhjanKolmionAlkupisteOrigo() {
         Kolmio tyhjaKolmio = new Kolmio();
-        SijainninLaskija tyhjaLaskija = new SijainninLaskija(tyhjaKolmio);
+        SijainninLaskija tyhjaLaskija = new SijainninLaskija();
 
         assertEquals("(0,0)", tyhjaLaskija.getSijainti().toString());
     }

@@ -7,22 +7,16 @@ package javalabra.logiikka;
  */
 public class SijainninLaskija {
 
-    private Piste sijainti;
+    private Piirrettava sijainti;
     private Kolmio kolmio;
 
     /**
-     * Luo uuden laskijan <p> Saa parametrina kolmion, jonka yksi kulma arvotaan
-     * aloitussijainniksi. Jos kolmio on tyhja, aloitussijainti on (0,0)
+     * Luo uuden laskijan 
      *
-     * @param kolmio Sijannin laskentaan käytettävä kolmio
      */
-    public SijainninLaskija(Kolmio kolmio) {
-        this.kolmio = kolmio;
-        if (!kolmio.getKulmat().isEmpty()) {
-            this.sijainti = new Piste(kolmio.arvoKulma().getX(), kolmio.arvoKulma().getY());
-        } else {
-            this.sijainti = new Piste(0, 0);
-        }
+    public SijainninLaskija() {
+        this.kolmio = new Kolmio();
+        this.sijainti = new Piste(0,0);
     }
 
     /**
@@ -35,7 +29,7 @@ public class SijainninLaskija {
             return;
         }
 
-        Piste kohde = this.kolmio.arvoKulma();
+        Piirrettava kohde = this.kolmio.arvoKulma();
 
         int uusiX = kohde.getX() - (kohde.getX() - sijainti.getX()) / 2;
         int uusiY = kohde.getY() - (kohde.getY() - sijainti.getY()) / 2;
@@ -44,11 +38,17 @@ public class SijainninLaskija {
         sijainti.setY(uusiY);
     }
 
-    public Piste getSijainti() {
+    public Piirrettava getSijainti() {
         return sijainti;
     }
 
-    public void setSijainti(Piste sijainti) {
+    public void setSijainti(Piirrettava sijainti) {
         this.sijainti = sijainti;
     }
+
+    public Kolmio getKolmio() {
+        return kolmio;
+    }
+    
+    
 }
