@@ -66,7 +66,7 @@ public class Kolmio {
     public void piirra(Graphics g) {
         g.setColor(Color.red);
         for (Piirrettava p : this.kulmat) {
-            g.fillOval(p.getX(), p.getY(), 5, 5);
+            g.fillOval(p.getX(), p.getY(), 2, 2);
         }
         g.setColor(Color.black);
     }

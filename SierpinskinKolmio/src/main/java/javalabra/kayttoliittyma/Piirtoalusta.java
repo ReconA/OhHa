@@ -5,7 +5,7 @@ import javalabra.piirtaja.Piirtaja;
 import javax.swing.JPanel;
 
 /**
- *
+ *Jpanel, johon pisteet piirretaan
  */
 public class Piirtoalusta extends JPanel {
 

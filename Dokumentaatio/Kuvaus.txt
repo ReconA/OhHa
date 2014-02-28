@@ -8,7 +8,7 @@ Aihe: Ohjelma piirt‰‰ Sierpinskin kolmion ns. "chaos game"- menetelm‰ll‰.
 	5. Piirret‰‰n t‰h‰n paikkaan piste ja asetetaan se nykyiseksi sijanniksi
 	6. Toistetaan kohdasta 3.
 
-	Satojen pisteiden j‰lkeen alkaa hahmottua mielenkiintoinen kuvio, Sierpinskin kolmio. Piirt‰mist‰ kuvataan liikkuvalla kappaleella, esim pallolla. 
+	Satojen pisteiden j‰lkeen alkaa hahmottua mielenkiintoinen kuvio, Sierpinskin kolmio. 
 
 
 K‰ytt‰j‰: Kuka tahansa

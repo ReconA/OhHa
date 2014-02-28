@@ -2,6 +2,7 @@ package javalabra.piirtaja;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+
 /**
  * Kuuntelee nappaimiston syotetta
  */
@@ -11,10 +12,6 @@ public class NappaimistonKuuntelija implements KeyListener {
 
     public NappaimistonKuuntelija(Piirtaja piirtaja) {
         this.piirtaja = piirtaja;
-    }
-
-    @Override
-    public void keyTyped(KeyEvent e) {
     }
 
     @Override
@@ -28,5 +25,9 @@ public class NappaimistonKuuntelija implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
     }
 }

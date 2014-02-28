@@ -1,0 +1,5 @@
+Testauksen tärkein osio oli sijainninlaskijan uuden sijainnin laskeva metodi. Testausta hankaloitti metodin satunnaisuus, mutta kayttamalla yhden kulman kolmiota tämänkin metodin testaus onnistui. Logiikan piirra() metodien testaus tehtiin manuaalisesti kokeilemalla, kuten tehtiin hiiren- ja näppäimistönkuuntelijan osalta. Näiden testaus tapahtui ohjelmaa käyttämällä. Testaus oli helppoa ohjelman yksinkertaisuuden takia: jos ohjelma piirsi oikein, koodi oli todennäköisesti kunnossa. 
+
+Pit:ia ei tuntemattomasta syystä saatu toimimaan projektin kanssa, joten mutaatiotestausta ei toteutettu. 
+
+Bugi: ohjelman minimointi johtaa vanhojen kuvioiden katoamiseen. 

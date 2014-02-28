@@ -8,6 +8,3 @@ Esimerkkejä kuvioista:
 	tasasivuinen kolmio
 	puolisuunnikas
 	neliö, jonka yksi kulma on lisätty kahdesti 
-
-
-Bugi: ohjelman minimointi johtaa vanhojen kuvioiden katoamiseen. 

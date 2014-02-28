@@ -4,8 +4,8 @@ import javalabra.kayttoliittyma.Kayttoliittyma;
 import javalabra.logiikka.SijainninLaskin;
 import javalabra.piirtaja.Piirtaja;
 import javax.swing.SwingUtilities;
-/*
- * Pääohjelma
+/**
+ * Sierpinskin Kolmio paaohjelma
  */
 
 public class Main {

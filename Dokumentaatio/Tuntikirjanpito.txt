@@ -17,5 +17,5 @@
 	Viimeistelyä, valmistautiminen koodikatselmointiin. 
 
 28.2 5h
-	Projektin viimeiset silaukset: käyttöohje, rakennekuvaus, koodin läpikäynti
+	Projektin viimeiset silaukset: käyttöohje, rakennekuvaus, koodin läpikäynti, testausdokumentti
 	

@@ -10,15 +10,22 @@ import javalabra.logiikka.SijainninLaskin;
 import javax.swing.Timer;
 
 /**
- * Huolehtii uusien pisteiden piirtämisestä ja
+ * Huolehtii uusien pisteiden piirtämisestä
  */
 public class Piirtaja extends Timer implements ActionListener {
 
     /**
      * Pisteiden maksimimaara
      */
-    private final int PISTEITA_KORKEINTAAN = 2147483000;
-    
+    private final int PISTEITA_KORKEINTAAN = Integer.MAX_VALUE - 501;
+    /**
+     * Kuinka monta pistetta piirretaan kerrallaan
+     */
+    private final int pisteitaPiirrossa;
+    /**
+     * Pisteiden piirtojen valinen aika millisekunteina
+     */
+    private final int piirtojenValinenAika;
     /**
      * Piirtajan kayttama laskin
      */
@@ -27,26 +34,14 @@ public class Piirtaja extends Timer implements ActionListener {
      * Piirtoalusta, jolle piirtaja piirtaa
      */
     private Piirtoalusta piirtoalusta;
-    
     /**
      * Lista jo piirretyista pisteista
      */
     private Pisteet pisteet;
-    
     /**
      * Maarittelee piirretaanko talla hetkella
      */
     private boolean paalla;
-    
-    /**
-     * Pisteiden piirtojen valinen aika millisekunteina
-     */
-    private int piirtojenValinenAika;
-    
-    /**
-     * Kuinka monta pistetta piirretaan kerrallaan
-     */
-    private int pisteitaPiirrossa;
 
     /**
      * Luo uuden piirtajan
@@ -62,7 +57,7 @@ public class Piirtaja extends Timer implements ActionListener {
         this.pisteet = new Pisteet();
         this.paalla = false;
         this.piirtojenValinenAika = 500;
-        this.pisteitaPiirrossa = 500;
+        this.pisteitaPiirrossa = 100;
         super.setDelay(piirtojenValinenAika);
     }
 
@@ -75,7 +70,7 @@ public class Piirtaja extends Timer implements ActionListener {
         if (!paalla || this.laskin.getKolmio().getKulmat().isEmpty()) {
             return;
         }
-        
+
         if (pisteet.getSize() < PISTEITA_KORKEINTAAN) {
             lisaaPisteita(pisteitaPiirrossa);
             pisteet.piirra(g);
@@ -93,12 +88,8 @@ public class Piirtaja extends Timer implements ActionListener {
             System.out.println("Piirtoalustaa ei asetettu!");
             return;
         }
-        
-        this.piirtoalusta.repaint();
-    }
 
-    public void setPiirtoalusta(Piirtoalusta alusta) {
-        this.piirtoalusta = alusta;
+        this.piirtoalusta.repaint();
     }
 
     /**
@@ -153,5 +144,9 @@ public class Piirtaja extends Timer implements ActionListener {
 
     public boolean isPaalla() {
         return paalla;
+    }
+
+    public void setPiirtoalusta(Piirtoalusta alusta) {
+        this.piirtoalusta = alusta;
     }
 }

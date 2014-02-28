@@ -7,7 +7,10 @@ import java.awt.Graphics;
  *
  */
 public interface Piirrettava {
-
+/**
+ * Piirtaa kuvion
+ * @param g Kaytettava grafiikka
+ */
     void piirra(Graphics g);
     int getX();
     int getY();
