@@ -3,10 +3,11 @@ package javalabra.logiikka;
 import java.awt.Graphics;
 /**
  * Piirrettävä piste
- * @author Atte
  */
 public class Piste implements Piirrettava {
-
+/**
+ * Pisteen koordinaatit
+ */
     private int x, y;
 /**
  * Luo uuden pisteen annettuihin koordinaatteihin
@@ -51,12 +52,4 @@ public class Piste implements Piirrettava {
     public void piirra(Graphics graphics) {
         graphics.fillRect(x, y, 1, 1);
     }
-    
-    
-    @Override
-    public Piirrettava kloonaa() {
-        return new Piste(this.x, this.y);
     }
-
-  
-}

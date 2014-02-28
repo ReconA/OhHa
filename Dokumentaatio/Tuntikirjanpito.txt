@@ -12,3 +12,10 @@
 
 13.2 5h
 	Timerin kanssa säätämistä, sekvenssikaavioiden piirtämistä
+
+20.2 4h
+	Viimeistelyä, valmistautiminen koodikatselmointiin. 
+
+28.2 5h
+	Projektin viimeiset silaukset: käyttöohje, rakennekuvaus, koodin läpikäynti
+	

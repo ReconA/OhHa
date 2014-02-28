@@ -13,9 +13,9 @@ Aihe: Ohjelma piirt‰‰ Sierpinskin kolmion ns. "chaos game"- menetelm‰ll‰.
 
 K‰ytt‰j‰: Kuka tahansa
 
-K‰ytt‰j‰n toiminnot (suunnitellut):
-	Valitse piirtonopeus
+K‰ytt‰j‰n toiminnot:
 	M‰‰rit‰ kolmion k‰rjet
 	Aloita/pys‰yt‰
+	Aloita uusi kuvio
 	 
 	

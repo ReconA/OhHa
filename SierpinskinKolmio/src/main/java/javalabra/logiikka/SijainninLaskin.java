@@ -3,18 +3,23 @@ package javalabra.logiikka;
 /**
  * Laskee uuden pisteen sijainnin <p>
  *
- * @author Atte
  */
-public class SijainninLaskija {
+public class SijainninLaskin {
 
+    /**
+     * Laskemisessa kaytettava nykyinen sijainti
+     */
     private Piirrettava sijainti;
+    /**
+     * Kolmio, joka sisaltaa laskennassa kaytettavat kulmat
+     */
     private Kolmio kolmio;
 
     /**
-     * Luo uuden laskijan 
+     * Luo uuden laskimen
      *
      */
-    public SijainninLaskija() {
+    public SijainninLaskin() {
         this.kolmio = new Kolmio();
         this.sijainti = new Piste(0,0);
     }

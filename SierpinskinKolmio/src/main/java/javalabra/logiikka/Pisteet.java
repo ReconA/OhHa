@@ -4,53 +4,53 @@ import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Lista piirretyista pisteista
+ *
+ * @author Atte
+ */
+public class Pisteet {
 
-
-public class Pisteet implements Piirrettava {
-
+    /**
+     *Lista piirrettavista pisteista
+     */
     private List<Piirrettava> pisteet;
 
+    /**
+     * Luo uuden listan pisteista
+     */
     public Pisteet() {
         this.pisteet = new ArrayList<>();
     }
-    
-    
-    @Override
+
+    /**
+     * Piirtaa kaikki listan pisteet
+     *
+     * @param g
+     */
     public void piirra(Graphics g) {
-        for (Piirrettava p: pisteet) {
+        for (Piirrettava p : pisteet) {
             p.piirra(g);
         }
     }
 
-    @Override
-    public Piirrettava kloonaa() {
-        return this;
-    }
-
-    @Override
-    public int getX() {
-        return 0;
-    }
-
-    @Override
-    public int getY() {
-        return 0;
-    }
-
-    @Override
-    public void setX(int x) {
-    }
-
-    @Override
-    public void setY(int y) {
-    }
-    
-    public int getSize() {
-        return this.pisteet.size();
-    }
-    
+    /**
+     * Lisaa parametrina annetun piirrettavan listaan
+     *
+     * @param p Lisattava olio
+     */
     public void lisaaPiirrettava(Piirrettava p) {
         this.pisteet.add(p);
     }
 
+    /**
+     * Tyhjentaa listan
+     */
+    public void tyhjenna() {
+        this.pisteet.clear();
+    }
+
+    public int getSize() {
+        return this.pisteet.size();
+    }
 }

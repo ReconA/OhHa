@@ -6,9 +6,8 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Atte
  */
-public class Piirtoalusta extends JPanel{
+public class Piirtoalusta extends JPanel {
 
     private Piirtaja piirtaja;
 
@@ -19,12 +18,9 @@ public class Piirtoalusta extends JPanel{
 
     @Override
     protected void paintComponent(Graphics graphics) {
-        super.paintComponent(graphics);
+        piirtaja.getLaskija().getKolmio().piirra(graphics);
         piirtaja.piirra(graphics);
+        
     }
 
-    public void piirraLisaa() {
-        super.repaint();
-    }
-    
 }

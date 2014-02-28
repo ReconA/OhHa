@@ -1,5 +1,7 @@
 package javalabra.kayttoliittyma;
 
+import javalabra.piirtaja.HiirenKuuntelija;
+import javalabra.piirtaja.NappaimistonKuuntelija;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -8,7 +10,6 @@ import java.awt.event.MouseListener;
 import javalabra.piirtaja.Piirtaja;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
-import javax.tools.Tool;
 
 /**
  * Ohjelman käyttöliittymä
@@ -31,6 +32,7 @@ public class Kayttoliittyma implements Runnable {
         frame.setPreferredSize(new Dimension(Toolkit.getDefaultToolkit().getScreenSize()));
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setResizable(false);
 
         luoKomponentit(frame.getContentPane());
         lisaaKuuntelijat();
@@ -48,6 +50,9 @@ public class Kayttoliittyma implements Runnable {
         return frame;
     }
 
+    /**
+     * Luo ja lisaa hiiren - ja nappaimistonkuuntelijan piirtajlle 
+     */
     private void lisaaKuuntelijat() {
         KeyListener kuuntelija = new NappaimistonKuuntelija(piirtaja);
         MouseListener hiirenKuuntelija = new HiirenKuuntelija(piirtaja);

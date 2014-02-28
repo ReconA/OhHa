@@ -1,0 +1,7 @@
+
+
+Logiikka-pakkauksen luokat huolehtivat pisteiden sijainnista ja uusien pisteiden laskennasta. Kolmio on lista pisteista, joita sijainninlaskin kayttaa kohdepisteena. Sijainninlaskin laskee uuden pisteen koordinaatit. Piirrettava on piirrettävien luokkien käyttämä rajapinta. 
+
+Käyttöliittymä sisältää piirtoalustan jota piirtäjä käyttää. 
+
+Piirtaja on käyttöliittymän ja logiikan välinen luokka. Se käyttää SijainninLaskin-luokkaa ja listaa pisteistä kuvion piirtämiseen. Sillä on hiiren - ja näppäimistönkuuntelijat syötteen lukemista varten. 

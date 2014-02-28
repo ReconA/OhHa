@@ -4,54 +4,51 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class SijainninLaskijaTest {
+public class SijainninLaskinTest {
 
-    SijainninLaskija laskija;
+    SijainninLaskin laskija;
     Kolmio kolmio;
 
     @Before
     public void setUp() {
-        kolmio = new Kolmio();
-        laskija = new SijainninLaskija();
+        laskija = new SijainninLaskin();
 
     }
 
     @Test
     public void konstruktoriSaaTyhjanKolmionAlkupisteOrigo() {
-        Kolmio tyhjaKolmio = new Kolmio();
-        SijainninLaskija tyhjaLaskija = new SijainninLaskija();
-
+        SijainninLaskin tyhjaLaskija = new SijainninLaskin();
         assertEquals("(0,0)", tyhjaLaskija.getSijainti().toString());
     }
 
     @Test
     public void laskinLaskeeUudenPisteenOikein() {
-        Piste sijainti = new Piste(-15, 20);
-        Piste k = new Piste(40, 0);
-
+        Piste sijainti = new Piste(-10, 20);
         laskija.setSijainti(sijainti);
+
+        Piste k = new Piste(40, 0);
+        laskija.getKolmio().lisaaKulma(k);
+
         laskija.laskeSeuraavaSijainti();
 
-        assertEquals("(13,10)", laskija.getSijainti().toString());
+        assertEquals("(15,10)", laskija.getSijainti().toString());
     }
 
     @Test
     public void uudenPisteenLaskentaToimiiUseastiKutsuttuna() {
         Piste sijainti = new Piste(20, -10);
-
         laskija.setSijainti(sijainti);
+        
+        laskija.getKolmio().lisaaKulma(new Piste(-50, -50));
+        
+        laskija.laskeSeuraavaSijainti();
+        laskija.laskeSeuraavaSijainti();
 
-        laskija.laskeSeuraavaSijainti();
-        laskija.laskeSeuraavaSijainti();
-        laskija.laskeSeuraavaSijainti();
-
-        assertEquals("(31,12)", laskija.getSijainti().toString());
+        assertEquals("(-33,-40)", laskija.getSijainti().toString());
     }
 
     @Test
-    public void liikkuminenKohtiTyhjaaKulmaa() {
-
-        Piste tyhja = null;
+    public void liikkuminenKohtiTyhjaaKulmaaEiAiheutaExceptionia() {
         laskija.laskeSeuraavaSijainti();
     }
 }

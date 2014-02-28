@@ -1,0 +1,13 @@
+Klikkaa pistett‰, johon haluat asettaa yhden kuvion kulman. Pisteiden m‰‰r‰ ei ole rajoitettu, mutta kolmeen pisteen muodostama kolmio on mielenkiintoisin tapaus.
+Spacebar k‰ynnist‰‰ piirt‰misen. Piirrett‰ess‰ sill‰ myˆs pys‰ytet‰‰n piirt‰minen. Piirt‰misen ollessa k‰ynniss‰ uusia pisteit‰ ei voi lis‰t‰. 
+Backspace pys‰ytt‰‰ nykyisen kuvion piirt‰misen lopullisesti. T‰m‰n j‰lkeen voidaan hiirell‰ m‰‰ritell‰ uusi piirrett‰v‰ kuvio. 
+
+
+
+Esimerkkej‰ kuvioista:
+	tasasivuinen kolmio
+	puolisuunnikas
+	neliˆ, jonka yksi kulma on lis‰tty kahdesti 
+
+
+Bugi: ohjelman minimointi johtaa vanhojen kuvioiden katoamiseen. 
